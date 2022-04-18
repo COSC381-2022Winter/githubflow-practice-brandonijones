@@ -1,2 +1,10 @@
+<!-- template for displaying all of the titles and overviews of the movies in the database -->
+
 <title>Movie Collection</title>
-<h1>{{ movies[0] }}!</h1>
+
+<div style="margin-left: 25%; margin-right: 25%">
+    {% for movie in movies %}
+        <h1>{{ movie['title'] }}</h1>
+        <p> {{ movie['overview'] }} </p>
+    {% endfor %}
+</div>
